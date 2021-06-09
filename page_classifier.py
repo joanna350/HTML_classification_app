@@ -4,10 +4,11 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 import logging
+import os
 
 from config.models.page_classifier_models import page_classifier_model
 from data.dataset import Dataset
-from data.functions_for_dataset_creator import inverse_map_dict
+from data.functions_for_dataset_creator import get_key_from_val, inverse_map_dict
 from io_funcs import pickle_save, pickle_load, read_text_file
 from logger import initialise_logger
 module_logger = logging.getLogger('main_app.page_classifier')
@@ -73,7 +74,7 @@ class PageClassifier:
 
         return predictions, confidence_array
 
-    def save(self, path_to_directory):
+    def save(self, path_to_directory, file1, file2):
         """
         Save trained vectorizer and classifier
         Parameters
@@ -83,8 +84,11 @@ class PageClassifier:
                             remember they have hardcoded names.
 
         """
-        pickle_save(path_to_directory + "/clf.pickle", self.clf)
-        pickle_save(path_to_directory + "/vectorizer.pickle", self.vectorizer)
+        if not os.path.isdir(path_to_directory):
+            os.mkdir(path_to_directory)
+
+        pickle_save(path_to_directory + '/' + file1, self.clf)
+        pickle_save(path_to_directory + '/' + file2, self.vectorizer)
 
     def load(self, path_to_directory):
         """
@@ -100,31 +104,36 @@ class PageClassifier:
         self.vectorizer = pickle_load(path_to_directory + "/" + "vectorizer.pickle")
 
     @staticmethod
-    def softmax(list):
-        new_list = []
-        for x in list:
-            e_x = np.exp(x - np.max(x))
-            x = e_x / e_x.sum(axis=0)
-            new_list.append(x)
-        return new_list
-
+    def softmax(x):
+        return np.exp(x)/np.sum(np.exp(x), axis=0)
+        # new_list = []
+        # for x in list:
+        #     e_x = np.exp(x - np.max(x))
+        #     x = e_x / e_x.sum(axis=0)
+        #     new_list.append(x)
+        # return new_list
 
 if __name__ == '__main__':
     root_logger_ = initialise_logger()
 
     html_string = read_text_file('data_store/examples/example_out_of_stock.html')
 
+    # de-seralize the models that were serialised after training
     page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
     page_classifier.load('saved_predictor')
 
+    # load test data
     dataset = Dataset(dataset_dir='./')
     dataset.load_from_list_of_strings([html_string])
+
+    # return predicted class with confidence level from the data
     predictions, confidence_array = page_classifier.predict(dataset)
     predicted_class_value = int(predictions[0])
 
+    # output to a dict/jsonify-able format
     results_dict = {
-        'pageClass': inverse_map_dict(page_classifier_model['models']['CLASS_NUMBER_FROM_NAME'])[predicted_class_value],
+        'pageClass': get_key_from_val(predicted_class_value, page_classifier_model['models']['CLASS_NUMBER_FROM_NAME']),
         'confidence': confidence_array[0][predicted_class_value]
     }
 
-    print(results_dict)
+    module_logger.info(f'result: {results_dict}')

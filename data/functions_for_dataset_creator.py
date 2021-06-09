@@ -247,6 +247,21 @@ def inverse_map_dict(input_dict):
     return inv_dict
 
 
+def get_key_from_val(givenV, dict):
+    '''
+    As the testing labels are 1 short of training labels (namely, 'bot')
+    handles this
+    '''
+    out = ''
+    for k, v in dict.items():
+        if givenV == v:
+            if out != '':
+                out += ',' + k
+            else:
+                out += k
+    return out if out != '' else 'no matching class'
+
+
 if __name__ == "__main__":
 
     # DOM = read_text_file('/home/anagh/PycharmProjects/nate.blackbox.options.detector.data/screenshots/sorted/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1400_1000.html')
@@ -259,4 +274,7 @@ if __name__ == "__main__":
                                'bot': 4
                                }
 
-    print(inverse_map_dict(CLASS_NUMBER_FROM_NAME))
+    print(inverse_map_dict(CLASS_NUMBER_FROM_NAME)[4])
+    for i in range(5):
+        print('for ', i)
+        print(get_key_from_val(i, CLASS_NUMBER_FROM_NAME))

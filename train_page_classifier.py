@@ -14,36 +14,43 @@ module_logger = logging.getLogger('main_app.train_page_classifier')
 
 
 def main_train_page_classifier():
+    # retrieve dictionary of parameters saved in page_classifier_model (set in main)
     config = ConfigClass.config
 
-    # load train dataset
+    # create placeholder for training data
     dc_train = Dataset(config['models']['TRAIN_DATASET_DIR'],
                        training_set=True)
+    # load html files only
     dc_train.load_from_class_names(config['models']['CLASSES_TO_TRAIN'], multiple_resolution_dataset=True)
 
-    # load test dataset
+    # create placeholder for testing data
     dc_test = Dataset(config['models']['TEST_DATASET_DIR'])
+    # load html files only
     dc_test.load_from_class_names(config['models']['CLASSES_TO_TEST'], multiple_resolution_dataset=False)
 
-    # combine dataset
+    # combine dataset (default is False)
     if config['models']['TRAIN_ON_TEST_SET']:
         dc_train.combine_datasets(dc_test)
 
-    # Create Model
-    config = page_classifier_model
+    # instantiates the class that will handle (de-)serializing training models to output test performance
     model = PageClassifier(config)
-    #Train Model
+
+    # Train Model with the created training data set
     model.train(dc_train)
 
-    # Evaluation
+    # Return prediction based on test data
     pred = model.predict(dc_test)[0]
+
+    # check the score based on true labels
     score = metrics.accuracy_score(dc_test.list_of_class_values, pred)
-    cm = confusion_matrix(dc_test.list_of_class_values, pred)
+
     module_logger.info("The final accuracy is %f" % score)
 
-    # Save model
+    # Save model in serialized format
     if config['models']['SAVE_MODEL_AFTER_TEST']:
-        model.save(config['models']['OUTPUT_DIRECTORY'])
+        model.save(config['models']['OUTPUT_DIRECTORY'],
+                   config['models']['OUTPUT1'],
+                   config['models']['OUTPUT2'])
 
 
 if __name__ == '__main__':
