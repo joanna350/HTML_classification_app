@@ -3,7 +3,7 @@ import logging
 
 from data.functions_for_dataset_creator import html_str_to_one_string_of_visible_text
 from data.functions_for_dataset_creator import filtering_dict_creator, base_site_from_html
-from io_funcs import pickle_save, read_text_file
+from util.io_funcs import pickle_save, read_text_file
 from config.models.page_classifier_models import page_classifier_model
 
 module_logger = logging.getLogger('main_app.dataset')

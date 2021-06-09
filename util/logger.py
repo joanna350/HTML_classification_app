@@ -2,8 +2,9 @@ import os
 import logging
 
 
-def initialise_logger(log_file_path=None):
-    logger = logging.getLogger('main_app')
+def initialise_logger(logname=None, log_file_path=None):
+
+    logger = logging.getLogger(logname)
     logger.setLevel(logging.INFO)
 
     log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -31,7 +32,6 @@ def initialise_logger(log_file_path=None):
     return logger
 
 
-if __name__ == '__main__':
-
-    root_logger = initialise_logger(log_file_path='test.log')
+if __name__=='__main__':
+    root_logger = initialise_logger(logname='main_app', log_file_path='test.log')
     root_logger.warning('This is an example of a utf-8 character: {}'.format('\U0001F414'))

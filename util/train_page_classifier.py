@@ -2,12 +2,12 @@ from sklearn.metrics import confusion_matrix
 
 from config.models.page_classifier_models import page_classifier_model
 from data.dataset import Dataset
-from configclass import ConfigClass
+from config.configclass import ConfigClass
 import logging
 from sklearn import metrics
 
-from logger import initialise_logger
-from page_classifier import PageClassifier
+from util.logger import initialise_logger
+from util.page_classifier import PageClassifier
 
 
 module_logger = logging.getLogger('main_app.train_page_classifier')
@@ -53,7 +53,10 @@ def main_train_page_classifier():
                    config['models']['OUTPUT2'])
 
 
-if __name__ == '__main__':
+def run():
     root_logger_ = initialise_logger()
     ConfigClass.set_configuration(config=page_classifier_model, config_seed=42)
     main_train_page_classifier()
+
+
+run()

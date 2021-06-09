@@ -7,7 +7,7 @@ import json
 from bs4 import BeautifulSoup
 import numpy as np
 
-from io_funcs import read_text_file
+from util.io_funcs import read_text_file
 
 
 

@@ -9,20 +9,25 @@ import os
 from config.models.page_classifier_models import page_classifier_model
 from data.dataset import Dataset
 from data.functions_for_dataset_creator import get_key_from_val, inverse_map_dict
-from io_funcs import pickle_save, pickle_load, read_text_file
-from logger import initialise_logger
-module_logger = logging.getLogger('main_app.page_classifier')
+from util.io_funcs import pickle_save, pickle_load, read_text_file
+from util.logger import initialise_logger
 
 
 class PageClassifier:
 
     def __init__(self, config):
+        # user's choice of parameter received in dictionary
         self.config = config
-        self.build_model()
+       # self.build_model()
         self.vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.6, stop_words='english', ngram_range=(1, 3))
+        # instantiates the model given in config parameter as an attribute to the class
         self.clf = self.build_model()
 
     def build_model(self):
+        '''
+        Creates instances of models for classification
+        Supports Linear SVM, RFC and SGD Classifier
+        '''
         model = self.config['models']['NAME']
         model_dict = {"LinearSVM": LinearSVC(penalty='l1', dual=False, tol=1e-3),
                       "RFC": RandomForestClassifier(n_estimators=100),
@@ -32,6 +37,7 @@ class PageClassifier:
             module_logger.error("Model name incorrect!")
             exit()
 
+        # return the model with the matching name
         clf = model_dict[model]
         return clf
 
@@ -68,15 +74,22 @@ class PageClassifier:
         """
         # list_of_text = html_str_to_one_string_of_visible_text(html_str)
         x_test = self.vectorizer.transform(dataset.list_of_text_strs)
+        # sparse matrix of shape (1,1973)
+
+        # returns [n_samples], predicted class per sample
         predictions = self.clf.predict(x_test)
 
-        confidence_array = self.softmax(self.clf.decision_function(x_test))
+        # returns array shape (n_samples, n_classes)
+        distance_hpp = self.clf.decision_function(x_test)
+
+        confidence_array = self.softmax(distance_hpp)
 
         return predictions, confidence_array
 
     def save(self, path_to_directory, file1, file2):
         """
         Save trained vectorizer and classifier
+
         Parameters
         ----------
         path_to_directory : str
@@ -92,7 +105,8 @@ class PageClassifier:
 
     def load(self, path_to_directory):
         """
-        Loads saved vectorizer and classifier.
+        Loads saved vectorizer and classifier
+
         Parameters
         ----------
         path_to_directory : str
@@ -104,8 +118,21 @@ class PageClassifier:
         self.vectorizer = pickle_load(path_to_directory + "/" + "vectorizer.pickle")
 
     @staticmethod
-    def softmax(x):
-        return np.exp(x)/np.sum(np.exp(x), axis=0)
+    def softmax(list):
+        '''
+        performs softmax over the given list.
+        namely take the exponent of each integer, divide by the sum of them
+
+        Parameters
+        ----------
+        list: List[List[int]] is the accepted format
+
+        Returns
+        -------
+        new_list: List[List[int]] retained format, softmax-operated list
+        '''
+        for x in list:
+            return np.exp(x)/np.sum(np.exp(x), axis=0)
         # new_list = []
         # for x in list:
         #     e_x = np.exp(x - np.max(x))
@@ -113,17 +140,18 @@ class PageClassifier:
         #     new_list.append(x)
         # return new_list
 
-if __name__ == '__main__':
-    root_logger_ = initialise_logger()
 
-    html_string = read_text_file('data_store/examples/example_out_of_stock.html')
+def execute(filename):
+    root_logger_ = initialise_logger(logname='main_app.page_classifier')
+
+    html_string = read_text_file(filename)
 
     # de-seralize the models that were serialised after training
     page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
-    page_classifier.load('saved_predictor')
+    page_classifier.load('saved_predictor_temp')
 
-    # load test data
-    dataset = Dataset(dataset_dir='./')
+    # prepare test data
+    dataset = Dataset(dataset_dir='../')
     dataset.load_from_list_of_strings([html_string])
 
     # return predicted class with confidence level from the data
@@ -133,7 +161,13 @@ if __name__ == '__main__':
     # output to a dict/jsonify-able format
     results_dict = {
         'pageClass': get_key_from_val(predicted_class_value, page_classifier_model['models']['CLASS_NUMBER_FROM_NAME']),
-        'confidence': confidence_array[0][predicted_class_value]
+        'confidence': confidence_array[predicted_class_value]
     }
 
-    module_logger.info(f'result: {results_dict}')
+    root_logger_.info(f'result: {results_dict}')
+    return results_dict
+
+# to run as module 'python -m path_to_file' (. in place of /)
+if __name__ == '__main__':
+    fn = 'data_store/examples/example_out_of_stock.html'
+    execute(fn)

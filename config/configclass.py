@@ -1,4 +1,4 @@
-from singleton import singleton
+from config.singleton import singleton
 
 
 @singleton

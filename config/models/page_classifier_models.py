@@ -3,7 +3,7 @@ from definition import Config
 
 page_classifier_model = {
     'models': {
-        'NAME': 'SGD', # also available LinearSVM, RFC, SGD
+        'NAME': 'SGD', # also available LinearSVM, RFC, SGD  (RFC does not have decision_function feature)
         'LOAD_SAVED_MODEL': False,
         'SAVED_MODEL_DIRECTORY': './',
         'TRAIN_ON_TEST_SET': False,
