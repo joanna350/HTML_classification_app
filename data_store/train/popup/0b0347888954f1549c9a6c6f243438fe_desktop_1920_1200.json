@@ -1,0 +1,13 @@
+{
+    "actual_viewport": {
+        "height": 1200,
+        "width": 1920
+    },
+    "expected_viewport": {
+        "height": 1200,
+        "width": 1920
+    },
+    "extended_url": "https://www.aliexpress.com/item/32918790249.html?spm=a2g0o.productlist.0.0.33a135bbJZ3yc4&algo_pvid=89ec2cba-5086-4b81-9994-ee1ab9e927f5&algo_expid=89ec2cba-5086-4b81-9994-ee1ab9e927f5-0&btsid=1ca6ebab-7d80-4256-9d9d-a940daa69ae2&ws_ab_test=searchweb0_0,searchweb201602_1,searchweb201603_52",
+    "nate_coordinates": true,
+    "source_url": "https://www.aliexpress.com/item/32918790249.html?spm=a2g0o.productlist.0.0.33a135bbJZ3yc4&algo_pvid=89ec2cba-5086-4b81-9994-ee1ab9e927f5&algo_expid=89ec2cba-5086-4b81-9994-ee1ab9e927f5-0&btsid=1ca6ebab-7d80-4256-9d9d-a940daa69ae2&ws_ab_test=searchweb0_0,searchweb201602_1,searchweb201603_52"
+}

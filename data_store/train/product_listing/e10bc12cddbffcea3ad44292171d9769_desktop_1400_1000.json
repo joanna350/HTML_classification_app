@@ -1,0 +1,13 @@
+{
+    "actual_viewport": {
+        "height": 1000,
+        "width": 1400
+    },
+    "expected_viewport": {
+        "height": 1000,
+        "width": 1400
+    },
+    "extended_url": "https://www.apple.com/",
+    "nate_coordinates": true,
+    "source_url": "https://www.apple.com"
+}
