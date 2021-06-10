@@ -1,0 +1,9 @@
+version: "3"
+services:
+   flask_app:
+    build: .
+    command: python3 run.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/flask-ml

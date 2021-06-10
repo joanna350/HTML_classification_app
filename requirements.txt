@@ -1,0 +1,7 @@
+selenium==3.141.0
+numpy
+matplotlib
+beautifulsoup4==4.8.0
+Werkzeug
+sklearn
+flask
