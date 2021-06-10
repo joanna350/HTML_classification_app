@@ -14,6 +14,15 @@ def allowed_file(filename):
 def upload_form():
 	return render_template('upload.html')
 
+@app.route('/refresh')
+def refresh():
+	# empty directory
+	cwd = app.config['UPLOAD_FOLDER']
+	if os.listdir(cwd):
+		for f in os.listdir(cwd):
+			os.remove(os.path.join(cwd, f))
+	return redirect('/')
+
 @app.route('/', methods=['POST'])
 def upload_file():
 	# check if the post request has the file part

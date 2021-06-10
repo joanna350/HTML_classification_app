@@ -100,10 +100,10 @@ class PageClassifier:
         if not os.path.isdir(path_to_directory):
             os.mkdir(path_to_directory)
 
-        pickle_save(path_to_directory + '/' + file1, self.clf)
-        pickle_save(path_to_directory + '/' + file2, self.vectorizer)
+        pickle_save(os.path.join(path_to_directory, file1), self.clf)
+        pickle_save(os.path.join(path_to_directory, file2), self.vectorizer)
 
-    def load(self, path_to_directory):
+    def load(self, path_to_directory, file1, file2):
         """
         Loads saved vectorizer and classifier
 
@@ -114,8 +114,8 @@ class PageClassifier:
                             remember they have hardcoded names.
 
         """
-        self.clf = pickle_load(path_to_directory + "/" + "clf.pickle")
-        self.vectorizer = pickle_load(path_to_directory + "/" + "vectorizer.pickle")
+        self.clf = pickle_load(os.path.join(path_to_directory, file1))
+        self.vectorizer = pickle_load(os.path.join(path_to_directory, file2))
 
     @staticmethod
     def softmax(list):
@@ -148,7 +148,9 @@ def execute(filename):
 
     # de-seralize the models that were serialised after training
     page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
-    page_classifier.load('saved_predictor_temp')
+    page_classifier.load('saved_predictor_temp',
+                         page_classifier_model['models']['OUTPUT1'],
+                         page_classifier_model['models']['OUTPUT2'])
 
     # prepare test data
     dataset = Dataset(dataset_dir='../')
@@ -166,6 +168,7 @@ def execute(filename):
 
     root_logger_.info(f'result: {results_dict}')
     return results_dict
+
 
 # to run as module 'python -m path_to_file' (. in place of /)
 if __name__ == '__main__':
