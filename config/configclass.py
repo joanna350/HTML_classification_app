@@ -1,4 +1,4 @@
-from config.singleton import singleton
+from nate.config.singleton import singleton
 
 
 @singleton

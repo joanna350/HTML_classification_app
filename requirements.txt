@@ -4,3 +4,4 @@ Werkzeug
 sklearn
 flask
 gunicorn
+pytest

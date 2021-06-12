@@ -1,9 +1,9 @@
 import os
-import urllib.request
 from app import app
-from flask import Flask, request, redirect, render_template, jsonify
-from werkzeug.utils import secure_filename
 from util.page_classifier import execute
+
+from flask import request, redirect, render_template, jsonify
+from werkzeug.utils import secure_filename
 
 ALLOWED_EXTENSIONS = ['html']
 

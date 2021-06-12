@@ -115,6 +115,7 @@ class Dataset:
 
         """
         self.list_of_text_strs += dataset_to_be_incorporated.list_of_text_strs
+
         self.list_of_class_values += dataset_to_be_incorporated.list_of_class_values
 
 

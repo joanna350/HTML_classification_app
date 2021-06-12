@@ -8,9 +8,11 @@ import os
 
 from config.models.page_classifier_models import page_classifier_model
 from data.dataset import Dataset
-from data.functions_for_dataset_creator import get_key_from_val, inverse_map_dict
+from data.functions_for_dataset_creator import get_key_from_val
 from util.io_funcs import pickle_save, pickle_load, read_text_file
-from util.logger import initialise_logger
+
+
+module_logger = logging.getLogger('main_app.train_page_classifier')
 
 
 class PageClassifier:
@@ -18,7 +20,7 @@ class PageClassifier:
     def __init__(self, config):
         # user's choice of parameter received in dictionary
         self.config = config
-       # self.build_model()
+
         self.vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.6, stop_words='english', ngram_range=(1, 3))
         # instantiates the model given in config parameter as an attribute to the class
         self.clf = self.build_model()
@@ -28,16 +30,14 @@ class PageClassifier:
         Creates instances of models for classification
         Supports Linear SVM, RFC and SGD Classifier
         '''
+
         model = self.config['models']['NAME']
         model_dict = {"LinearSVM": LinearSVC(penalty='l1', dual=False, tol=1e-3),
                       "RFC": RandomForestClassifier(n_estimators=100),
                       "SGD": SGDClassifier(alpha=.0001, max_iter=50, penalty='l1')
                       }
-        if model not in model_dict.keys():
-            module_logger.error("Model name incorrect!")
-            exit()
 
-        # return the model with the matching name
+        # return the model with the matching name (will be controlled)
         clf = model_dict[model]
         return clf
 
@@ -142,13 +142,12 @@ class PageClassifier:
 
 
 def execute(filename):
-    root_logger_ = initialise_logger(logname='main_app.page_classifier')
 
     html_string = read_text_file(filename)
 
     # de-seralize the models that were serialised after training
     page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
-    page_classifier.load('saved_predictor_temp',
+    page_classifier.load('saved_predictor',
                          page_classifier_model['models']['OUTPUT1'],
                          page_classifier_model['models']['OUTPUT2'])
 
@@ -165,12 +164,12 @@ def execute(filename):
         'pageClass': get_key_from_val(predicted_class_value, page_classifier_model['models']['CLASS_NUMBER_FROM_NAME']),
         'confidence': confidence_array[predicted_class_value]
     }
-
-    root_logger_.info(f'result: {results_dict}')
     return results_dict
 
 
 # to run as module 'python -m path_to_file' (. in place of /)
 if __name__ == '__main__':
-    fn = 'data_store/examples/example_out_of_stock.html'
-    execute(fn)
+
+    fn = '../data_store/examples/example_out_of_stock.html'
+    results = execute(fn)
+    module_logger.info(f'result: {results}')

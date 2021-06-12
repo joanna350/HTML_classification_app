@@ -10,7 +10,6 @@ import numpy as np
 from util.io_funcs import read_text_file
 
 
-
 def is_visible(element):
     """
     Checks if an element is visible in the DOM using the nate visible attribute
@@ -235,17 +234,6 @@ def dataset_creator(list_of_folders, path_to_sorted):
             examples = dataset_creator_single_tag(path_to_sorted + list_of_folders[index], index - 1, examples)
     examples = np.delete(examples, 0, 0)
     np.save('generated_examples_for_sklearn', examples)
-
-
-def inverse_map_dict(input_dict):
-    inv_dict = dict()
-    for key,value in input_dict.items():
-        if value in inv_dict.keys():
-            key = '{},{}'.format(inv_dict[value], key)
-        inv_dict[value] = key
-
-    return inv_dict
-
 
 def get_key_from_val(givenV, dict):
     '''
