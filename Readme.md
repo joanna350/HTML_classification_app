@@ -1,7 +1,7 @@
-####Environment:
+#### Environment:
 - Ubuntu 18.04
 
-####To Run:
+#### To Run:
 - To run the app with Docker:
 ```
 docker-compose up
