@@ -147,7 +147,7 @@ def execute(filename):
 
     # de-seralize the models that were serialised after training
     page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
-    page_classifier.load('saved_predictor',
+    page_classifier.load('saved_predictor_temp',
                          page_classifier_model['models']['OUTPUT1'],
                          page_classifier_model['models']['OUTPUT2'])
 

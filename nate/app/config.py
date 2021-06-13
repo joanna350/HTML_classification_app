@@ -1,7 +1,7 @@
 import os
 
 class Config(object):
-    secret_key = "secret key"
+    SECRET_KEY = os.urandom(24)
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024
 
     cwd = os.getcwd() + '/uploads'

@@ -2,8 +2,11 @@ import os
 from app import app
 from util.page_classifier import execute
 
-from flask import request, redirect, render_template, jsonify
+from flask import flash, request, redirect, render_template, jsonify
 from werkzeug.utils import secure_filename
+from redis import Redis
+
+redis = Redis(host="redis", port=6379)
 
 ALLOWED_EXTENSIONS = ['html']
 
@@ -12,7 +15,8 @@ def allowed_file(filename):
 
 @app.route('/')
 def upload_form():
-	return render_template('upload.html')
+	visits = redis.incr('counter')
+	return render_template('upload.html', visits=visits)
 
 @app.route('/refresh')
 def refresh():
