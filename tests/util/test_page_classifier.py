@@ -13,9 +13,11 @@ import numpy as np
 import os
 
 
-'''
+"""
 tests here will only pass with the current files under saved_predictor_temp
-'''
+"""
+
+
 class DataSet:
     def __init__(self, html_str):
         self.list_of_text_strs = [

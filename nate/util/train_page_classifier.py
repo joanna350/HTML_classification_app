@@ -2,7 +2,8 @@ from sklearn import metrics
 import logging
 
 import sys
-sys.path.append('..')
+
+sys.path.append("..")
 from config.page_classifier_models import page_classifier_model
 from data.dataset import Dataset
 from config.configclass import ConfigClass
@@ -19,7 +20,7 @@ def main_train_page_classifier():
 
     # create placeholder for training data
     dc_train = Dataset(config["models"]["TRAIN_DATASET_DIR"], training_set=True)
-    # load html files only
+    # load html files onlyf
     dc_train.load_from_class_names(
         config["models"]["CLASSES_TO_TRAIN"], multiple_resolution_dataset=True
     )
@@ -44,6 +45,7 @@ def main_train_page_classifier():
     score = metrics.accuracy_score(dc_test.list_of_class_values, pred)
     module_logger.info(f"The final accuracy is {score}")
     import sys
+
     sys.exit(0)
     # Save model in serialized format
     if config["models"]["SAVE_MODEL_AFTER_TEST"]:

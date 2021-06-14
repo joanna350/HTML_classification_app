@@ -5,10 +5,13 @@ from nate.data.functions_for_dataset_creator import (
     html_str_to_one_string_of_visible_text,
 )
 from nate.data.functions_for_dataset_creator import text_from_html_nate
+from nate.data.functions_for_dataset_creator import base_site_from_html
+from nate.data.functions_for_dataset_creator import filtering_dict_creator
 from nate.data.functions_for_dataset_creator import get_key_from_val
 import os
 from bs4 import BeautifulSoup
 import pytest
+from collections import defaultdict
 
 
 root = "nate/data_store/examples/"
@@ -39,7 +42,7 @@ def test_text_from_html_nate():
     base1 = {
         "example_out_of_stock.html": 37,
         "example_product_landing.html": 82,
-        "example_site_error.html": 9
+        "example_site_error.html": 9,
     }
     for fp in fps:
         assert len(text_from_html_nate(testdata1[fp])) == base1[fp]
@@ -108,6 +111,36 @@ testdata4 = [
 @pytest.mark.parametrize("input, output", testdata4)
 def test_preprocess_list(input, output):
     assert preprocess_list(input) == output
+
+
+testdata5 = [
+    ("0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1400_1000.html", "www.yoox.com")
+]
+
+
+@pytest.mark.parametrize("input, output", testdata5)
+def test_base_site_from_html(input, output):
+    train_path = "nate/data_store/train/out_of_stock"
+    assert base_site_from_html(input, train_path) == output
+
+
+testdata6 = [
+    ("www.victoriassecret.com", [True, 3]),
+    ("www.marksandspencer.com", [False, 15]),
+    ("www.waterstones.com", [True, 1]),
+]
+
+testdata7 = {"www.marksandspencer.com": 15, "www.victoriassecret.com": 2}
+testdata7 = defaultdict(int, testdata7)
+
+
+@pytest.mark.parametrize("input, output", testdata6)
+def test_filtering_dict_creator(input, output):
+    bool_, upd_dict = filtering_dict_creator(
+        input, testdata7.copy()
+    )  # prevent mutable obj from updating
+    assert bool_ == output[0]  # bool
+    assert upd_dict[input] == testdata7[input] + int(bool_)  # increase and not
 
 
 def test_get_key_from_val():

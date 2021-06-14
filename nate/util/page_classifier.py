@@ -137,7 +137,8 @@ class PageClassifier:
 def execute(filename):
     # Separate import to run for flask app only
     import sys
-    sys.path.append('..')
+
+    sys.path.append("..")
     from config.page_classifier_models import page_classifier_model
     from data.dataset import Dataset
     from data.functions_for_dataset_creator import get_key_from_val

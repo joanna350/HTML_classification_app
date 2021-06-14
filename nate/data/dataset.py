@@ -1,4 +1,9 @@
+import inspect
 import os
+import sys
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
 import logging
 
 from .functions_for_dataset_creator import html_str_to_one_string_of_visible_text
@@ -6,8 +11,8 @@ from .functions_for_dataset_creator import (
     filtering_dict_creator,
     base_site_from_html,
 )
-from nate.config.page_classifier_models import page_classifier_model
-from nate.util.io_funcs import read_text_file
+from config.page_classifier_models import page_classifier_model
+from util.io_funcs import read_text_file
 
 module_logger = logging.getLogger("main_app.dataset")
 config = page_classifier_model["models"]
@@ -25,11 +30,10 @@ class Dataset:
         max_items_per_class : int
         """
         self.list_of_text_strs = []
-        self.list_of_class_values = []
+        self.class_value_counter = {}
         self.dataset_dir = dataset_dir
         self.training_set = training_set
         self.max_items_per_class = max_items_per_class
-
 
     def load_from_directory_of_htmls(
         self, path_to_directory, class_value, multiple_resolution_dataset=False
@@ -53,7 +57,7 @@ class Dataset:
         for file in os.listdir(path_to_directory):
 
             if self.max_items_per_class and (
-                self.list_of_class_values.count(class_value) >= self.max_items_per_class
+                self.class_value_counter[class_value] >= self.max_items_per_class
             ):
                 break
 
@@ -64,13 +68,9 @@ class Dataset:
                 continue
 
             if self.training_set:
-                valid_item = filtering_dict_creator(
+                valid_item, dict_of_domains = filtering_dict_creator(
                     base_site_from_html(file, path_to_directory), dict_of_domains
-                )[0]
-                dict_of_domains = filtering_dict_creator(
-                    base_site_from_html(file, path_to_directory), dict_of_domains
-                )[1]
-
+                )
                 if not valid_item:
                     module_logger.info("Skipped item {}".format(file))
                     continue
@@ -83,7 +83,10 @@ class Dataset:
                 continue
 
             self.list_of_text_strs.append(visible_text_str)
-            self.list_of_class_values.append(class_value)
+            if class_value not in self.class_value_counter:
+                self.class_value_counter[class_value] = 1
+            else:
+                self.class_value_counter[class_value] += 1
 
     def load_from_class_names(self, class_names, multiple_resolution_dataset=False):
         """
@@ -105,6 +108,7 @@ class Dataset:
 
     def load_from_list_of_strings(self, list_of_html_str):
         """
+        called in page_classifier (prediction on new dataset)
         Parameters
         ----------
         list_of_html_str : list of str
