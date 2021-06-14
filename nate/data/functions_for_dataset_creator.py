@@ -70,9 +70,7 @@ def preprocess_list(final_list):
         if not preprocess_text(text).isspace():
             new_final_list.append(preprocess_text(text))
     new_final_list = [text for text in new_final_list if text != '']
-    print('........')
-    print(new_final_list)
-    print('...')
+
     return new_final_list
 
 
@@ -118,9 +116,7 @@ def text_from_html_nate(elements):
     for element in list_of_visible_elements:
         inner_text = element.findAll(text=True, recursive=False)
         list_of_text = list_of_text + inner_text
-    print('after processing')
-    print(len(list_of_text))
-    print(list_of_text)
+
     return preprocess_list(list_of_text)
 
 

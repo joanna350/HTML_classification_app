@@ -14,16 +14,19 @@ docker-compose up
 
 - To run  the network test over Docker:
 ```
-chmod u+x dockertest.sh
+chmod u+x dockertest.sh dockertest_app.sh
 ./dockertest.sh
+./dockertest_app.sh
 ```
-- To run the app without Docker:
+- To run the app without Docker/and test:
 ```
 nate/app/routes.py, set
 line 9: Redis(host="0.0.0.0"
 
 nate/
 python run.py
+chmod u+x test_app.sh
+./test_app.sh
 ```
 >> 
 - To run the unit tests: 

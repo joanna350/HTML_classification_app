@@ -6,11 +6,6 @@ import numpy as np
 import logging
 import os
 
-from config.models.page_classifier_models import page_classifier_model
-from data.dataset import Dataset
-from data.functions_for_dataset_creator import get_key_from_val
-from util.io_funcs import pickle_save, pickle_load, read_text_file
-
 
 module_logger = logging.getLogger('main_app.train_page_classifier')
 
@@ -80,7 +75,6 @@ class PageClassifier:
 
         # returns array shape (n_samples, n_classes)
         distance_hpp = self.clf.decision_function(x_test)
-
         confidence_array = self.softmax(distance_hpp)
 
         return predictions, confidence_array
@@ -99,6 +93,7 @@ class PageClassifier:
         if not os.path.isdir(path_to_directory):
             os.mkdir(path_to_directory)
 
+        from util.io_funcs import pickle_save
         pickle_save(os.path.join(path_to_directory, file1), self.clf)
         pickle_save(os.path.join(path_to_directory, file2), self.vectorizer)
 
@@ -113,6 +108,7 @@ class PageClassifier:
                             remember they have hardcoded names.
 
         """
+        from util.io_funcs import pickle_load
         self.clf = pickle_load(os.path.join(path_to_directory, file1))
         self.vectorizer = pickle_load(os.path.join(path_to_directory, file2))
 
@@ -135,6 +131,12 @@ class PageClassifier:
 
 
 def execute(filename):
+    # Rids error when using this script as a module from pytest
+    from config.models.page_classifier_models import page_classifier_model
+    from data.dataset import Dataset
+    from data.functions_for_dataset_creator import get_key_from_val
+    from util.io_funcs import read_text_file
+
 
     html_string = read_text_file(filename)
 
