@@ -55,11 +55,6 @@
 ```
 
 #### To Run:
-Generate trained models
-```
-nate/
-python -m util.train_page_classifier
-```
 
 Run the app with Docker:
 ```
@@ -91,12 +86,21 @@ python -m run
 chmod u+x test_app.sh
 ./test_app.sh
 ```
->> 
-- To run the unit tests:
+
+Run the unit tests:
 ```
 Nate/
 chmod u+x nate/run_tests.sh
 ./nate/run_tests.sh
 ```
+
+Generate trained models
+
+* current unit tests are set to pre-made models, test cases must be updated with new generation
+```
+nate/
+python -m util.train_page_classifier
+```
+
 Caveats:
 To host the docker app on Mac, may want to refer to the [github issues](https://github.com/docker/for-mac/issues/2670)
