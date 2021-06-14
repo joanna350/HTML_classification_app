@@ -54,9 +54,13 @@
         └── test_page_classifier.py
 ```
 
-## Run 
+## How to Run 
 
 #### The app (with Docker):
+```
+nate/app/routes.py
+line 9: Redis(host="redis"
+```
 ```
 nate/
 docker-compose up
