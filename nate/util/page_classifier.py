@@ -5,32 +5,34 @@ from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 import logging
 import os
+from .io_funcs import read_text_file
 
-
-module_logger = logging.getLogger('main_app.train_page_classifier')
+module_logger = logging.getLogger("main_app.train_page_classifier")
 
 
 class PageClassifier:
-
     def __init__(self, config):
         # user's choice of parameter received in dictionary
         self.config = config
 
-        self.vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.6, stop_words='english', ngram_range=(1, 3))
+        self.vectorizer = TfidfVectorizer(
+            sublinear_tf=True, max_df=0.6, stop_words="english", ngram_range=(1, 3)
+        )
         # instantiates the model given in config parameter as an attribute to the class
         self.clf = self.build_model()
 
     def build_model(self):
-        '''
+        """
         Creates instances of models for classification
         Supports Linear SVM, RFC and SGD Classifier
-        '''
+        """
 
-        model = self.config['models']['NAME']
-        model_dict = {"LinearSVM": LinearSVC(penalty='l1', dual=False, tol=1e-3),
-                      "RFC": RandomForestClassifier(n_estimators=100),
-                      "SGD": SGDClassifier(alpha=.0001, max_iter=50, penalty='l1')
-                      }
+        model = self.config["models"]["NAME"]
+        model_dict = {
+            "LinearSVM": LinearSVC(penalty="l1", dual=False, tol=1e-3),
+            "RFC": RandomForestClassifier(n_estimators=100),
+            "SGD": SGDClassifier(alpha=0.0001, max_iter=50, penalty="l1"),
+        }
 
         # return the model with the matching name (will be controlled)
         clf = model_dict[model]
@@ -94,6 +96,7 @@ class PageClassifier:
             os.mkdir(path_to_directory)
 
         from util.io_funcs import pickle_save
+
         pickle_save(os.path.join(path_to_directory, file1), self.clf)
         pickle_save(os.path.join(path_to_directory, file2), self.vectorizer)
 
@@ -109,12 +112,13 @@ class PageClassifier:
 
         """
         from util.io_funcs import pickle_load
+
         self.clf = pickle_load(os.path.join(path_to_directory, file1))
         self.vectorizer = pickle_load(os.path.join(path_to_directory, file2))
 
     @staticmethod
     def softmax(list):
-        '''
+        """
         performs softmax over the given list.
         namely take the exponent of each integer, divide by the sum of them
 
@@ -125,26 +129,28 @@ class PageClassifier:
         Returns
         -------
         new_list: List[List[int]] retained format, softmax-operated list
-        '''
+        """
         for x in list:
-            return np.exp(x)/np.sum(np.exp(x), axis=0)
+            return np.exp(x) / np.sum(np.exp(x), axis=0)
 
 
 def execute(filename):
-    # Rids error when using this script as a module from pytest
-    from config.models.page_classifier_models import page_classifier_model
+    # Separate import to run for flask app only
+    import sys
+    sys.path.append('..')
+    from config.page_classifier_models import page_classifier_model
     from data.dataset import Dataset
     from data.functions_for_dataset_creator import get_key_from_val
-    from util.io_funcs import read_text_file
-
 
     html_string = read_text_file(filename)
 
     # de-seralize the models that were serialised after training
-    page_classifier = PageClassifier({'models': {'NAME': 'SGD'}})
-    page_classifier.load('saved_predictor_temp',
-                         page_classifier_model['models']['OUTPUT1'],
-                         page_classifier_model['models']['OUTPUT2'])
+    page_classifier = PageClassifier({"models": {"NAME": "SGD"}})
+    page_classifier.load(
+        "saved_predictor_temp",
+        page_classifier_model["models"]["OUTPUT1"],
+        page_classifier_model["models"]["OUTPUT2"],
+    )
 
     # prepare test data
     dataset = Dataset()
@@ -156,15 +162,18 @@ def execute(filename):
 
     # output to a dict/jsonify-able format
     results_dict = {
-        'pageClass': get_key_from_val(predicted_class_value, page_classifier_model['models']['CLASS_NUMBER_FROM_NAME']),
-        'confidence': confidence_array[predicted_class_value]
+        "pageClass": get_key_from_val(
+            predicted_class_value,
+            page_classifier_model["models"]["CLASS_NUMBER_FROM_NAME"],
+        ),
+        "confidence": confidence_array[predicted_class_value],
     }
     return results_dict
 
 
 # to run as module 'python -m path_to_file' (. in place of /)
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    fn = '../data_store/examples/example_out_of_stock.html'
+    fn = "../data_store/examples/example_out_of_stock.html"
     results = execute(fn)
-    module_logger.info(f'result: {results}')
+    module_logger.info(f"result: {results}")

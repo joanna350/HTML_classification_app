@@ -1,7 +1,15 @@
 #### Environment:
 - Ubuntu 18.04
 
+#### File Structure
+
+
 #### To Run:
+Generate trained models
+```
+nate/
+python -m util.train_page_classifier
+```
 - To run the app with Docker:
 ```
 nate/
@@ -12,11 +20,10 @@ docker-compose up
 - Uploaded files will be under directory `nate/uploads`
 - To clear the database of `uploads`, use the endpoint `/refresh`
 
-- To run  the network test over Docker:
+- To run the network test over Docker:
 ```
-chmod u+x dockertest.sh dockertest_app.sh
+chmod u+x dockertest.sh
 ./dockertest.sh
-./dockertest_app.sh
 ```
 - To run the app without Docker/and test:
 ```
@@ -24,7 +31,7 @@ nate/app/routes.py, set
 line 9: Redis(host="0.0.0.0"
 
 nate/
-python run.py
+python -m run
 chmod u+x test_app.sh
 ./test_app.sh
 ```

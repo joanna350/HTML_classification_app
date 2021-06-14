@@ -3,7 +3,6 @@ from nate.config.singleton import singleton
 
 @singleton
 class ConfigClass:
-
     def __init__(self):
         self.config = dict()
         self.config_seed = None
