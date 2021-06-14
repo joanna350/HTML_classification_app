@@ -1,7 +1,7 @@
-#### Environment:
+## Environment:
 - Ubuntu 18.04
 
-#### File Structure
+## File Structure
 ```
 ├── nate
 │   ├── app
@@ -54,9 +54,9 @@
         └── test_page_classifier.py
 ```
 
-#### To Run:
+## Run 
 
-Run the app with Docker:
+#### The app (with Docker):
 ```
 nate/
 docker-compose up
@@ -67,18 +67,20 @@ docker-compose up
 
 - To clear the database of `nate/uploads`, add `/refresh` to the url and enter
 
-Run the network test over Docker:
+#### Network test:
 ```
 chmod u+x dockertest.sh
 ./dockertest.sh
 ```
 
-Run the app without Docker/and test:
+#### The app locally:
 
 ```
 nate/app/routes.py
 line 9: Redis(host="0.0.0.0"
 ```
+
+#### Curl test
 
 ```
 nate/
@@ -87,14 +89,14 @@ chmod u+x test_app.sh
 ./test_app.sh
 ```
 
-Run the unit tests:
+#### Run the unit tests:
 ```
 Nate/
 chmod u+x nate/run_tests.sh
 ./nate/run_tests.sh
 ```
 
-Generate trained models
+#### Generate trained models
 
 * current unit tests are set to pre-made models, test cases must be updated with new generation
 ```
