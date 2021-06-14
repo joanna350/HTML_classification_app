@@ -6,7 +6,7 @@ from flask import flash, request, redirect, render_template, jsonify
 from werkzeug.utils import secure_filename
 from redis import Redis
 
-redis = Redis(host="redis", port=6379)
+redis = Redis(host="0.0.0.0", port=6379)
 
 ALLOWED_EXTENSIONS = ['html']
 

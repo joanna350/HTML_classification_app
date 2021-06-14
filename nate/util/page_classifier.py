@@ -72,7 +72,6 @@ class PageClassifier:
         confidence_array : list of lists of predicted confidence values for every category
 
         """
-        # list_of_text = html_str_to_one_string_of_visible_text(html_str)
         x_test = self.vectorizer.transform(dataset.list_of_text_strs)
         # sparse matrix of shape (1,1973)
 
@@ -133,12 +132,6 @@ class PageClassifier:
         '''
         for x in list:
             return np.exp(x)/np.sum(np.exp(x), axis=0)
-        # new_list = []
-        # for x in list:
-        #     e_x = np.exp(x - np.max(x))
-        #     x = e_x / e_x.sum(axis=0)
-        #     new_list.append(x)
-        # return new_list
 
 
 def execute(filename):
@@ -152,7 +145,7 @@ def execute(filename):
                          page_classifier_model['models']['OUTPUT2'])
 
     # prepare test data
-    dataset = Dataset(dataset_dir='../')
+    dataset = Dataset()
     dataset.load_from_list_of_strings([html_string])
 
     # return predicted class with confidence level from the data

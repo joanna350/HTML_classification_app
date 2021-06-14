@@ -70,6 +70,9 @@ def preprocess_list(final_list):
         if not preprocess_text(text).isspace():
             new_final_list.append(preprocess_text(text))
     new_final_list = [text for text in new_final_list if text != '']
+    print('........')
+    print(new_final_list)
+    print('...')
     return new_final_list
 
 
@@ -90,6 +93,7 @@ def html_str_to_one_string_of_visible_text(html_str):
     soup = BeautifulSoup(html_str, 'html.parser')
     elements = soup.findAll()
     list_of_text = text_from_html_nate(elements)
+
     text_str = " ".join(list_of_text)
     return text_str
 
@@ -108,13 +112,15 @@ def text_from_html_nate(elements):
     list_of_text : list of visible text
 
     """
-
     list_of_visible_elements = list(filter(is_visible, elements))
     list_of_text = []
 
     for element in list_of_visible_elements:
         inner_text = element.findAll(text=True, recursive=False)
         list_of_text = list_of_text + inner_text
+    print('after processing')
+    print(len(list_of_text))
+    print(list_of_text)
     return preprocess_list(list_of_text)
 
 
@@ -132,18 +138,3 @@ def get_key_from_val(givenV, dict):
                 out += k
     return out if out != '' else 'no matching class'
 
-
-if __name__ == "__main__":
-
-    CLASS_NUMBER_FROM_NAME =  {'out_of_stock': 0,
-                               'popup': 1,
-                               'product_landing_page': 2,
-                               'product_listing': 3,
-                               'site_error': 4,
-                               'bot': 4
-                               }
-
-    print(inverse_map_dict(CLASS_NUMBER_FROM_NAME)[4])
-    for i in range(5):
-        print('for ', i)
-        print(get_key_from_val(i, CLASS_NUMBER_FROM_NAME))
