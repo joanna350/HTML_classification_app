@@ -1,11 +1,11 @@
 import pytest
 
-from nate.util.page_classifier import PageClassifier
-from nate.util.io_funcs import read_text_file
-from nate.data.functions_for_dataset_creator import (
+from main.util.page_classifier import PageClassifier
+from main.util.io_funcs import read_text_file
+from main.data.functions_for_dataset_creator import (
     html_str_to_one_string_of_visible_text,
 )
-from nate.util.io_funcs import pickle_load
+from main.util.io_funcs import pickle_load
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
@@ -49,16 +49,16 @@ def test_PageClassifier():
         ),
     }
 
-    root = "nate/data_store/examples/"
+    root = "main/data_store/examples/"
     fns = os.listdir(root)
     for fn in fns:
         html_string = read_text_file(os.path.join(root, fn))
         data = DataSet(html_string)
 
         # test model uploaded
-        pg.clf = pickle_load(os.path.join("nate/saved_predictor_temp", "clf.pickle"))
+        pg.clf = pickle_load(os.path.join("main/saved_predictor_temp", "clf.pickle"))
         pg.vectorizer = pickle_load(
-            os.path.join("nate/saved_predictor_temp", "vectorizer.pickle")
+            os.path.join("main/saved_predictor_temp", "vectorizer.pickle")
         )
         classnum_in_list, confidence_array = pg.predict(data)
 
