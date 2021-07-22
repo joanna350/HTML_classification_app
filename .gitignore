@@ -5,3 +5,5 @@ __pycache__/
 */*/__pycache__/
 ../__pycache__/
 ./__pycache__/
+main/data_store/
+main/saved_predictor_temp

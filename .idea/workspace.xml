@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0146b4cf-dd1d-44ba-b781-226afb10d2ec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/app.wsgi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/app/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/app/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/app/templates/upload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/config/configclass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/config/page_classifier_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/config/singleton.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data/functions_for_dataset_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/examples/example_out_of_stock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/examples/example_product_landing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/examples/example_site_error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/out_of_stock/11620_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/out_of_stock/11623_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/out_of_stock/11630_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/popup/11414_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/popup/11422_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/popup/11424_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_landing_page/ex8384step01.large.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_landing_page/ex8386step01.large.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_landing_page/ex8402step01.large.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_listing/11524_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_listing/11617_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/product_listing/11670_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/site_error/11512_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/site_error/11622_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/test/site_error/11639_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/00fd224efef778db6276a16675d3f1a9_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/0e48a670c0906cd07ad66da2e73a8f07_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/c651c4870f9fdbff4768bf5f3db8761f_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/bot/e9503e911a95adcfc89d4c42c648c846_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a8c606aecfed98e389a8401b34e8c8a_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0a95bd9bbe7b14f39eaf16713e90ede1_desktop_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/0d13c7c3bda8281f389550b4e8d2240a_desktop_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/out_of_stock/621287a112bba8f8522914d119d1a032_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/000a2aeeafd43adb446045a7a45a67b3_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0b0347888954f1549c9a6c6f243438fe_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/0ff135a705758417c4da5ecb3259222d_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/popup/abc6980c4d7e9ad8dcd78cabb0c5f319_desktop_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/00c67009b251d81e1008d4ca7c00a140_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0b377d5476bf4ee9a07558f85cb690b7_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/0ca91f514e0507f95b00374da1e1d772_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_landing_page/9080f7bd27bc2fa329226f0645549037_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0b03e50a5b1a1d5a824a0916b3d42c43_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0be03809c18f0fa139785eff53b7abbb_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/0c6abe6b4769b6055c26b309811e6373_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/product_listing/e10bc12cddbffcea3ad44292171d9769_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0a30cb3df4253d168ac7e494284f714c_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ac98bdca301be6adf6316cd4c3969e5_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/0ad8ef612a7f412c90d2319937d82833_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1400_1000.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1400_1000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1400_1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1920_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1920_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_1920_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_412_1200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_412_1200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_desktop_412_1200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_mobile_618_1236.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_mobile_618_1236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/data_store/train/site_error/add65c3c387191f179db37d03ce4226f_mobile_618_1236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/definition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/dockertest.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/run_tests.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/saved_predictor_temp/clf.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/saved_predictor_temp/vectorizer.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/setup_env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/test_app.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/util/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/util/io_funcs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/util/page_classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nate/util/train_page_classifier.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bArQd21311FzkEteQ0WKNJSoDZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/data/out_of_stock" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nate" />
+      <recent name="$PROJECT_DIR$/nate/config" />
+      <recent name="$PROJECT_DIR$/nate/util" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.train_page_classifier">
+    <configuration name="train_page_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Nate" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nate/util/train_page_classifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test.sh" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/nate/test.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_page_classifier.py" type="tests" factoryName="py.test" temporary="true">
+      <module name="Nate" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/util/test_train_page_classifier.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.train_page_classifier" />
+      <item itemvalue="Python tests.train_page_classifier.py" />
+      <item itemvalue="Shell Script.test.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train_page_classifier" />
+        <item itemvalue="Python tests.train_page_classifier.py" />
+        <item itemvalue="Shell Script.test.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0146b4cf-dd1d-44ba-b781-226afb10d2ec" name="Default Changelist" comment="" />
+      <created>1588085723734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588085723734</updated>
+      <workItem from="1588085725502" duration="2201000" />
+      <workItem from="1623229802912" duration="7675000" />
+      <workItem from="1623238026502" duration="9565000" />
+      <workItem from="1623250176974" duration="3236000" />
+      <workItem from="1623301700330" duration="1340000" />
+      <workItem from="1623329719147" duration="1917000" />
+      <workItem from="1623441642100" duration="998000" />
+      <workItem from="1623504123244" duration="17656000" />
+      <workItem from="1623589239184" duration="8227000" />
+      <workItem from="1623602659858" duration="26498000" />
+      <workItem from="1623671378332" duration="6280000" />
+      <workItem from="1623679949733" duration="7212000" />
+      <workItem from="1623687829774" duration="4821000" />
+      <workItem from="1623692659449" duration="3097000" />
+      <workItem from="1623699622745" duration="1216000" />
+      <workItem from="1625751546525" duration="20000" />
+      <workItem from="1626368221381" duration="1237000" />
+      <workItem from="1626944023748" duration="704000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1623687810349">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="828" y="206" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.33.1853.1047@67.33.1853.1047" timestamp="1623687810349" />
+    <state x="1074" y="340" width="755" height="431" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623603013191">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="1074" y="340" width="755" height="431" key="#com.intellij.fileTypes.FileTypeChooser/67.33.1853.1047@67.33.1853.1047" timestamp="1623603013191" />
+    <state x="1113" y="246" width="655" height="619" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623242236354">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="1113" y="246" width="655" height="619" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.33.1853.1047@67.33.1853.1047" timestamp="1623242236354" />
+    <state x="683" y="220" width="798" height="673" key="#test.sh" timestamp="1623661984087">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="683" y="220" width="798" height="673" key="#test.sh/67.33.1853.1047@67.33.1853.1047" timestamp="1623661984087" />
+    <state x="1140" y="257" width="530" height="598" key="FileChooserDialogImpl" timestamp="1626722330961">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="1140" y="257" width="530" height="598" key="FileChooserDialogImpl/67.33.1853.1047@67.33.1853.1047" timestamp="1626722330961" />
+    <state width="1579" height="214" key="GridCell.Tab.0.bottom" timestamp="1623687819067">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state width="1579" height="214" key="GridCell.Tab.0.bottom/67.33.1853.1047@67.33.1853.1047" timestamp="1623687819066" />
+    <state width="1579" height="214" key="GridCell.Tab.0.center" timestamp="1623687819065">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state width="1579" height="214" key="GridCell.Tab.0.center/67.33.1853.1047@67.33.1853.1047" timestamp="1623687819064" />
+    <state width="1579" height="214" key="GridCell.Tab.0.left" timestamp="1623687819063">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state width="1579" height="214" key="GridCell.Tab.0.left/67.33.1853.1047@67.33.1853.1047" timestamp="1623687819063" />
+    <state width="1579" height="214" key="GridCell.Tab.0.right" timestamp="1623687819066">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state width="1579" height="214" key="GridCell.Tab.0.right/67.33.1853.1047@67.33.1853.1047" timestamp="1623687819066" />
+    <state x="910" y="228" width="1000" height="654" key="Vcs.Push.Dialog.v2" timestamp="1623247622258">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="910" y="228" width="1000" height="654" key="Vcs.Push.Dialog.v2/67.33.1853.1047@67.33.1853.1047" timestamp="1623247622258" />
+    <state x="947" y="82" width="963" height="946" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1623247635592">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="947" y="82" width="963" height="946" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.33.1853.1047@67.33.1853.1047" timestamp="1623247635591" />
+    <state x="1035" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1623694229666">
+      <screen x="67" y="33" width="1853" height="1047" />
+    </state>
+    <state x="1035" y="45" width="840" height="1034" key="search.everywhere.popup/67.33.1853.1047@67.33.1853.1047" timestamp="1623694229666" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Nate$pytest_in_train_page_classifier_py.coverage" NAME="train_page_classifier.py Coverage Results" MODIFIED="1623687748836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
+    <SUITE FILE_PATH="coverage/Nate$train_page_classifier.coverage" NAME="train_page_classifier Coverage Results" MODIFIED="1623687811700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
+    <SUITE FILE_PATH="coverage/nate_page_classifier$train_page_classifier.coverage" NAME="train_page_classifier Coverage Results" MODIFIED="1588087796913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/nate_page_classifier$page_classifier.coverage" NAME="page_classifier Coverage Results" MODIFIED="1588087831417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
