@@ -1,4 +1,4 @@
-from nate.util.io_funcs import pickle_save, pickle_load, read_text_file
+from main.util.io_funcs import pickle_save, pickle_load, read_text_file
 
 
 def test_pickle_modules(tmpdir):

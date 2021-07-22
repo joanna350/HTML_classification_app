@@ -1,6 +1,6 @@
 import os
 import pytest
-from nate.data.dataset import Dataset
+from main.data.dataset import Dataset
 
 
 def test_Dataset():
@@ -29,7 +29,7 @@ def test_load_from_class_names():
 
 
 def test_load_from_list_of_strings():
-    root = "nate/data_store/examples/"
+    root = "main/data_store/examples/"
     fps = os.listdir(root)  # id list
     testdata = {}
     base = {

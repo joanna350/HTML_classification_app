@@ -1,20 +1,20 @@
-from nate.data.functions_for_dataset_creator import is_visible
-from nate.data.functions_for_dataset_creator import preprocess_text
-from nate.data.functions_for_dataset_creator import preprocess_list
-from nate.data.functions_for_dataset_creator import (
+from main.data.functions_for_dataset_creator import is_visible
+from main.data.functions_for_dataset_creator import preprocess_text
+from main.data.functions_for_dataset_creator import preprocess_list
+from main.data.functions_for_dataset_creator import (
     html_str_to_one_string_of_visible_text,
 )
-from nate.data.functions_for_dataset_creator import text_from_html_nate
-from nate.data.functions_for_dataset_creator import base_site_from_html
-from nate.data.functions_for_dataset_creator import filtering_dict_creator
-from nate.data.functions_for_dataset_creator import get_key_from_val
+from main.data.functions_for_dataset_creator import text_from_html_main
+from main.data.functions_for_dataset_creator import base_site_from_html
+from main.data.functions_for_dataset_creator import filter_dict_creator
+from main.data.functions_for_dataset_creator import get_key_from_val
 import os
 from bs4 import BeautifulSoup
 import pytest
 from collections import defaultdict
 
 
-root = "nate/data_store/examples/"
+root = "main/data_store/examples/"
 fps = os.listdir(root)  # id list
 testdata0 = {}  # for the first
 testdata1 = {}  # for the 2 consecutive
@@ -34,18 +34,18 @@ def test_html_in_one_chunk():
         "example_site_error.html": "this site canâ € ™t be reached â € ™s server ip address could not be found www lookout trendz com try checking the connection checking the proxy firewall and dns configuration err name not resolved reload details",
     }
     for fp in fps:
-        # call strucure: html_str_to_one_string_of_visible_text -> text_from_html_nate -> is_visible
+        # call strucure: html_str_to_one_string_of_visible_text -> text_from_html_main -> is_visible
         assert html_str_to_one_string_of_visible_text(testdata0[fp]) == base0[fp]
 
 
-def test_text_from_html_nate():
+def test_text_from_html_main():
     base1 = {
         "example_out_of_stock.html": 37,
         "example_product_landing.html": 82,
         "example_site_error.html": 9,
     }
     for fp in fps:
-        assert len(text_from_html_nate(testdata1[fp])) == base1[fp]
+        assert len(text_from_html_main(testdata1[fp])) == base1[fp]
 
 
 def test_is_visible():
@@ -120,7 +120,7 @@ testdata5 = [
 
 @pytest.mark.parametrize("input, output", testdata5)
 def test_base_site_from_html(input, output):
-    train_path = "nate/data_store/train/out_of_stock"
+    train_path = "main/data_store/train/out_of_stock"
     assert base_site_from_html(input, train_path) == output
 
 
@@ -135,8 +135,8 @@ testdata7 = defaultdict(int, testdata7)
 
 
 @pytest.mark.parametrize("input, output", testdata6)
-def test_filtering_dict_creator(input, output):
-    bool_, upd_dict = filtering_dict_creator(
+def test_filter_dict_creator(input, output):
+    bool_, upd_dict = filter_dict_creator(
         input, testdata7.copy()
     )  # prevent mutable obj from updating
     assert bool_ == output[0]  # bool
