@@ -1,0 +1,11 @@
+web:
+  build: .
+  command: python3 run.py
+  ports:
+    - "127.0.0.1:5000:5000"
+  volumes:
+    - .:/flask-ml
+  links:
+    - redis
+redis:
+  image: redis

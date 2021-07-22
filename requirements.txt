@@ -1,7 +1,0 @@
-numpy
-beautifulsoup4==4.8.0
-Werkzeug
-sklearn
-flask
-gunicorn
-pytest
