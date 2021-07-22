@@ -1,3 +1,8 @@
+## Project Scope
+- Flask Web Service that returns classification result based on received .html file
+- Model trained will be saved in serialised pickle format
+- TDD approach with Docker containerisation
+
 ## Environment:
 - Ubuntu 18.04
 
