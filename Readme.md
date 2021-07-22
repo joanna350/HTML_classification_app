@@ -3,7 +3,7 @@
 
 ## File Structure
 ```
-├── nate
+├── main
 │   ├── app
 │   │   ├── __init__.py
 │   │   ├── config.py
@@ -58,18 +58,18 @@
 
 #### The app (with Docker):
 ```
-nate/app/routes.py
+main/app/routes.py
 line 9: Redis(host="redis"
 ```
 ```
-nate/
+main/
 docker-compose up
 ```
 - Click on the url
 
 - Upload files with `rwx` access for the group
 
-- To clear the database of `nate/uploads`, add `/refresh` to the url and enter
+- To clear the database of `main/uploads`, add `/refresh` to the url and enter
 
 #### Network test:
 ```
@@ -80,14 +80,14 @@ chmod u+x dockertest.sh
 #### The app locally:
 
 ```
-nate/app/routes.py
+main/app/routes.py
 line 9: Redis(host="0.0.0.0"
 ```
 
 #### Curl test
 
 ```
-nate/
+main/
 python -m run
 chmod u+x test_app.sh
 ./test_app.sh
@@ -95,16 +95,16 @@ chmod u+x test_app.sh
 
 #### Run the unit tests:
 ```
-Nate/
-chmod u+x nate/run_tests.sh
-./nate/run_tests.sh
+root
+chmod u+x main/run_tests.sh
+./main/run_tests.sh
 ```
 
 #### Generate trained models
 
 * current unit tests are set to pre-made models, test cases must be updated with new generation
 ```
-nate/
+main/
 python -m util.train_page_classifier
 ```
 
