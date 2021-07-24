@@ -17,7 +17,7 @@ if curl http://${WEB_APP_IP}:5000 | grep -q '<b>Visits:</b>'; then
       exit 1
     fi
   else: # directory does not exist
-   echo "Retry from the path ~/Nate/nate/"
+   echo "Retry from the path ~/Docker_NLP_Flask/main/"
   fi
   exit 1
 
