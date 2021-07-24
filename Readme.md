@@ -2,6 +2,7 @@
 - Flask Web Service that returns classification result based on received .html file
 - Model trained will be saved in serialised pickle format
 - TDD approach with Docker containerisation
+- Backend engine for data creation and model training partially provided
 
 ## Environment:
 - Ubuntu 18.04
